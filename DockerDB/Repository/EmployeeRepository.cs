@@ -14,5 +14,10 @@ namespace DockerDB.Repository
         {
             return db.Employees.ToList();
         }
+        public void AddEmployee(Employees employee)
+        {
+            db.Employees.Add(employee);
+            db.SaveChanges();
+        }
     }
 }

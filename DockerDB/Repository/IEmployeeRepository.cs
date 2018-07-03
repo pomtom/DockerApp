@@ -8,5 +8,6 @@ namespace DockerDB.Repository
     public interface IEmployeeRepository
     {
         IEnumerable<Employees> GetAllEmployee();
+        void AddEmployee(Employees employee);
     }
 }

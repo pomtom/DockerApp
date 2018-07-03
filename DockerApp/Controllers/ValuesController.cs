@@ -35,8 +35,9 @@ namespace DockerApp.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Employees value)
         {
+            _employeeService.AddEmployee(value);
         }
 
         // PUT api/values/5

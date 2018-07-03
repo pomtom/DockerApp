@@ -14,6 +14,12 @@ namespace DockerBusiness.Service
         {
             this._employeeRepository = employeeRepository;
         }
+
+        public void AddEmployee(Employees employee)
+        {
+            _employeeRepository.AddEmployee(employee);
+        }
+
         public IEnumerable<Employees> GetAllEmployee()
         {
             return _employeeRepository.GetAllEmployee();

@@ -8,5 +8,7 @@ namespace DockerBusiness.Service
     public interface IEmployeeService
     {
         IEnumerable<Employees> GetAllEmployee();
+
+        void AddEmployee(Employees employee);
     }
 }
