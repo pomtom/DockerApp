@@ -1,8 +1,6 @@
-﻿using System;
+﻿using DockerDB.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using DockerDB.Models;
 
 namespace DockerDB.Repository
 {
@@ -14,10 +12,35 @@ namespace DockerDB.Repository
         {
             return db.Employees.ToList();
         }
+
         public void AddEmployee(Employees employee)
         {
             db.Employees.Add(employee);
             db.SaveChanges();
         }
+
+        public Employees GetEmployeeById(int id)
+        {
+            return db.Employees.FirstOrDefault(a => a.Id == id);
+        }
+
+        public void UpdateEmployee(int id, Employees employee)
+        {
+            Employees emp = GetEmployeeById(id);
+            emp.Date = employee.Date;
+            emp.Name = employee.Name;
+            emp.Photo = employee.Photo;
+            emp.Email = employee.Email;
+            db.Entry(emp).CurrentValues.SetValues(emp);
+            db.SaveChanges();
+        }
+
+        public void DeleteEmployee(int id)
+        {
+            Employees emp = GetEmployeeById(id);
+            db.Employees.Remove(emp);
+        }
+
+
     }
 }

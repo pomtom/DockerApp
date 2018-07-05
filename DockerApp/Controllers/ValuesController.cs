@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DockerBusiness.Service;
+﻿using DockerBusiness.Service;
 using DockerDB.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DockerApp.Controllers
 {
@@ -28,9 +26,9 @@ namespace DockerApp.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Employees Get(int id)
         {
-            return "value";
+            return _employeeService.GetEmployeeById(id);
         }
 
         // POST api/values
@@ -42,14 +40,16 @@ namespace DockerApp.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Employees employees)
         {
+            _employeeService.UpdateEmployee(id, employees);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _employeeService.DeleteEmployee(id);
         }
     }
 }
