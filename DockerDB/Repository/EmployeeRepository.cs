@@ -39,6 +39,7 @@ namespace DockerDB.Repository
         {
             Employees emp = GetEmployeeById(id);
             db.Employees.Remove(emp);
+            db.SaveChanges();
         }
 
 

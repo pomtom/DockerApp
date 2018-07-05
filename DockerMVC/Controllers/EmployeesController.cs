@@ -161,7 +161,7 @@ namespace DockerMVC.Controllers
                         var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
 
                         client.BaseAddress = new Uri(uri);
-                        var responseTask = client.PutAsync("Values", content);
+                        var responseTask = client.PutAsync("Values/" + id, content);
                         responseTask.Wait();
 
                         var result = responseTask.Result;
