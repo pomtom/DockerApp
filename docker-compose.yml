@@ -5,10 +5,11 @@ services:
     image: ${DOCKER_REGISTRY}dockerapp
     build:
       context: .
-      dockerfile: DockerApp/Dockerfile
+      dockerfile: DockerApp\Dockerfile
 
   dockermvc:
-      image: ${DOCKER_REGISTRY}dockermvc
-      build:
-        context: .
-        dockerfile: DockerMVC\Dockerfile
+    image: ${DOCKER_REGISTRY}dockermvc
+    build:
+      context: .
+      dockerfile: DockerMVC\Dockerfile
+
