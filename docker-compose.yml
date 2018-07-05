@@ -6,3 +6,9 @@ services:
     build:
       context: .
       dockerfile: DockerApp/Dockerfile
+
+  dockermvc:
+      image: ${DOCKER_REGISTRY}dockermvc
+      build:
+        context: .
+        dockerfile: DockerMVC\Dockerfile
