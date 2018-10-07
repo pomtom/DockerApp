@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerDB", "DockerDB\Docker
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerBusiness", "DockerBusiness\DockerBusiness.csproj", "{584C6312-33C6-432A-8F62-5F0904A8E49D}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8DF3E78F-A2C3-46B8-A141-738C27BEDFE0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerMVC", "DockerMVC\DockerMVC.csproj", "{7C9E2E8C-A210-4700-9D81-CF9FCCCC464E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerMVC", "DockerMVC\DockerMVC.csproj", "{7C9E2E8C-A210-4700-9D81-CF9FCCCC464E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{584C6312-33C6-432A-8F62-5F0904A8E49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584C6312-33C6-432A-8F62-5F0904A8E49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584C6312-33C6-432A-8F62-5F0904A8E49D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DF3E78F-A2C3-46B8-A141-738C27BEDFE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DF3E78F-A2C3-46B8-A141-738C27BEDFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DF3E78F-A2C3-46B8-A141-738C27BEDFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DF3E78F-A2C3-46B8-A141-738C27BEDFE0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C9E2E8C-A210-4700-9D81-CF9FCCCC464E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C9E2E8C-A210-4700-9D81-CF9FCCCC464E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C9E2E8C-A210-4700-9D81-CF9FCCCC464E}.Release|Any CPU.ActiveCfg = Release|Any CPU

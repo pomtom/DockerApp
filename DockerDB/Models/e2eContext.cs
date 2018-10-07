@@ -15,7 +15,7 @@ namespace DockerDB.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=172.30.112.102;Database=e2e;user id=sa;password=Password123;");
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-C9GMV6E\SQLEXPRESS;Database=e2e;user id=sa;password=ok123;");
             }
         }
 

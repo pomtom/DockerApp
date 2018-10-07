@@ -13,7 +13,7 @@ namespace DockerMVC.Controllers
 {
     public class EmployeesController : Controller
     {
-        string uri = "http://172.30.127.25/api/";
+        string uri = "http://localhost:52424/api/";
 
         // GET: Employees
         public async Task<IActionResult> Index()
