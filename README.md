@@ -35,6 +35,9 @@ docker stop <containerid> --force
 -- start running container
 docker start <containerid> 
   
+  --Copy file from Host machine to container instance 
+  
+  docker cp c:\abc.doc <5c89d188636 acontainer id>:C:\inetpub\wwwroot\abc.doc
   
   
   
