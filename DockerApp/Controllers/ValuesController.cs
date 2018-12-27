@@ -1,6 +1,7 @@
 ﻿using DockerBusiness.Service;
 using DockerDB.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,10 +11,12 @@ namespace DockerApp.Controllers
     public class ValuesController : Controller
     {
         private readonly IEmployeeService _employeeService;
+        private readonly AppSettings _appSettings;
 
-        public ValuesController(IEmployeeService employeeService)
+        public ValuesController(IEmployeeService employeeService, IOptions<AppSettings> appSettings)
         {
             this._employeeService = employeeService;
+            _appSettings = appSettings.Value;
         }
 
         [HttpGet]

@@ -1,24 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DockerMVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using DockerMVC.Models;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DockerMVC.Controllers
 {
     public class EmployeesController : Controller
     {
-        string uri = "http://localhost:52424/api/";
 
+        private readonly AppSettings _appSettings;
+        private readonly string uri = string.Empty;
+
+        public EmployeesController(IOptions<AppSettings> appSettings)
+        {
+            _appSettings = appSettings.Value;
+            uri = _appSettings.Url;
+        }
         // GET: Employees
         public async Task<IActionResult> Index()
         {
-
             IEnumerable<Employee> employee = null;
             using (var client = new HttpClient())
             {

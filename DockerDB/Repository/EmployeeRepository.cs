@@ -29,7 +29,6 @@ namespace DockerDB.Repository
             Employees emp = GetEmployeeById(id);
             emp.Date = employee.Date;
             emp.Name = employee.Name;
-            emp.Photo = employee.Photo;
             emp.Email = employee.Email;
             db.Entry(emp).CurrentValues.SetValues(emp);
             db.SaveChanges();
