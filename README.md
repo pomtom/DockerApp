@@ -36,10 +36,10 @@ docker stop <containerid> --force
 docker start <containerid> 
   
   --Copy file from Host machine to container instance 
- docker cp c:\abc.doc <acontainerid>:C:\inetpub\wwwroot\abc.doc
+ docker cp D:\Web.config 08b941ef6754:C:\inetpub\wwwroot\Web.config
   
   --copy from docker container to Host machine.
-  docker cp <acontainerid>:C:\inetpub\wwwroot\Web.config c:\Web.config
-  
+  docker cp 08b941ef6754:C:\inetpub\wwwroot\Web.config D:\Web.config
+   
   
 Run sql script which is added in solution folder name : e2edbscrip.sql
